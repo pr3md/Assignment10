@@ -1,0 +1,36 @@
+<div class="container" style="margin-top:40px;">
+	<div class="row">
+	
+	<div class="col-md-6 col-md-offset-3"  data-ng-controller="ReadController">
+	<h1 class="text-center">Retrieve ZIP Code by State</h1>
+	
+	<form>
+	<label>State:</label>
+	<input type="text" placeholder="TX" name="state" data-ng-model="state" class="form-control">
+	<br><br>
+	<button data-ng-hide="processStart" data-ng-click="Retrieve(state)" class="btn btn-primary">Retrieve</button>
+	<div data-ng-show="processStart">Please wait..<img src="assets/loading.gif"></div>
+	<br><br><div class="alert alert-info" data-ng-show="resultSet"><strong>Results served by http://localhost:8080/PallaviAssignment6/retrieve/doc using GET method</strong></div>
+	</form>
+		<div class="alert alert-danger" ng-show="zeroDocs"><strong>0 Documents found matching your query. Please try again.</strong></div>
+	<table class="table table-bordered table-striped table-hover" ng-show="resultSet">
+	<thead>
+		<tr>
+			<th>UID</th>
+			<th>Zip</th>
+			<th>City</th>
+			<th>State</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr data-ng-repeat="doc in response">
+			<td>{{doc._id.$oid}}</td>
+			<td>{{doc.zip}}</td>
+			<td>{{doc.city}}</td>
+			<td>{{doc.state}}</td>
+		</tr>
+	</tbody>
+	</table>
+	</div>
+	</div>
+</div>

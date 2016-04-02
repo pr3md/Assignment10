@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="author" content="Pallavi R">
+<title>RESTful Computation Service</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+/*!
+ * Start Bootstrap - Logo Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+	font-family: 'Open Sans', Arial;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+.detail {background:#FFF !important}
+.detail:hover {background:#fff !important}
+.detail-response {background:#fff !important; font-family:'Courier New'}
+.detail-response:hover {background:#FFF !important}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+a.navbar-brand{font-size:40px; margin-top:10px;text-align:center}
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    Computation API
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Services</h1>
+                <table class="table table-bordered table-striped table-hover">
+                <thead>
+                	<tr>
+                		<th>Service</th>
+                		<th>End point</th>
+                		<th>Parameters</th>
+                	</tr>
+                </thead>
+                <tbody>
+                	<tr>
+                		<td>Simple Interest</td>
+                		<td>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/calculate/si/p/t/r</td>
+                		<td>p, t, r</td>
+                	</tr>
+                	<tr class="detail">
+                		<td colspan="3"><b>Request URI: <code>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/calculate/si/3500/12/4</code></b></td>
+                	</tr>
+                	<tr class="detail-response">
+                		<td colspan="3"><b>JSON Response</b><br>
+                			<code>{
+								"SimpleInterest": 1680
+							}</code>
+                		</td>
+                	</tr>
+                	<tr>
+                		<td>Compound Interest</td>
+                		<td>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/calculate/ci/p/r/n/t</td>
+                		<td>p, r, n, t</td>
+                	</tr>
+                	<tr class="detail">
+                		<td colspan="3"><b>Request URI: <code>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/calculate/ci/3000/4/2/12</code></b></td>
+                	</tr>
+                	<tr class="detail-response">
+                		<td colspan="3"><b>JSON Response</b><br>
+                			<code>{ "CompoundInterest":9.223372036854776E18 }</code>
+                		</td>
+                	</tr>
+                	<tr>
+                		<td>Kelvin to Fahrenheit</td>
+                		<td>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/metrics/kelvintoF/kelvin</td>
+                		<td>kelvin</td>
+                	</tr>
+                	<tr class="detail">
+                		<td colspan="3"><b>Request URI: <code>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/metrics/kelvintoF/300</code></b></td>
+                	</tr>
+                	<tr class="detail-response">
+                		<td colspan="3"><b>JSON Response</b><br>
+                			<code>{ "Fahrenheit":80 }</code>
+                		</td>
+                	</tr>
+                	<tr>
+                		<td>Kelvin to Celcius</td>
+                		<td>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/metrics/kelvintoC/kelvin</td>
+                		<td>kelvin</td>
+                	</tr>
+                	<tr class="detail">
+                		<td colspan="3"><b>Request URI: <code>http://restlab10.amaxdsuktr.us-west-2.elasticbeanstalk.com/labassignment/metrics/kelvintoC/320</code></b></td>
+                	</tr>
+                	<tr class="detail-response">
+                		<td colspan="3"><b>JSON Response</b><br>
+                			<code>{ "Celcius":47 }</code>
+                		</td>
+                	</tr>
+                	
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

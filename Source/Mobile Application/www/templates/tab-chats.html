@@ -1,0 +1,19 @@
+<ion-view view-title="Temperature Conversion">
+  <ion-content class="padding">
+    <h2 class="text-center">Kelvin to Fahrenheit / Celcius</h2>
+    <form>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="Kelvin" ng-model="kelvin">
+        </label>
+      </div>
+      </form>
+      <br>
+        <button class="button button button-assertive" ng-click="convertFahrenheit(kelvin)">Convert to Fahrenheit</button>
+        <button class="button button button-calm" ng-click="convertCelcius(kelvin)">Convert to Celcius</button>
+ <br>
+    <div class="bar bar-calm" ng-show="convertStatus">
+          <h1 class="title">{{message}}</h1>
+      </div>
+  </ion-content>
+</ion-view>

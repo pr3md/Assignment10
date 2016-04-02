@@ -1,0 +1,23 @@
+<div class="container" style="margin-top:40px;">
+	<div class="row">
+	
+	<div class="col-md-6 col-md-offset-3">
+	<h1 class="text-center">Add ZIP Code</h1>
+	
+	<form data-ng-controller="POSTController">
+	<label>ZIP Code:</label>
+	<input type="text" placeholder="64109" name="zip" data-ng-model="zip" class="form-control">
+	<br>
+	<label>City:</label>
+	<input type="text" placeholder="Kansas City" name="city" data-ng-model="city" class="form-control">
+	<br>
+	<label>State:</label>
+	<input type="text" placeholder="Missouri" name="state" data-ng-model="state" class="form-control">
+	<br><br>
+	<button data-ng-hide="processStart" data-ng-click="RegisterZip(zip, city, state)" class="btn btn-primary">Add ZIP</button>
+	<div data-ng-show="processStart">Please wait..<img src="assets/loading.gif"></div>
+	<br><br><div class="alert alert-info" data-ng-show="status"><strong>Payload has been successfully sent to http://localhost:8080/PallaviAssignment6/register/doc using POST method.</strong></div>
+	</form>
+	</div>
+	</div>
+</div>

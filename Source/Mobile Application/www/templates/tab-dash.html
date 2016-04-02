@@ -1,0 +1,22 @@
+<ion-view view-title="Simple Interest">
+  <ion-content class="padding">
+    <h2 class="text-center">Simple Interest Calculation Tool</h2>
+    <form ng-submit="calcSimpleInterest(principle, term, roi)">
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="Principle Amount" ng-model="principle">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Term (Months)" ng-model="term">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Rate of Interest" ng-model="roi">
+        </label>
+      </div>
+      <button class="button button-block button-assertive">Calculate</button>
+    </form>
+    <div class="bar bar-calm" ng-show="calcStatus">
+          <h1 class="title">{{message}}</h1>
+      </div>
+  </ion-content>
+</ion-view>
